@@ -108,7 +108,9 @@ class CHWriter(Writer):
         except Exception as ex:
             logging.critical('QUERY FAILED')
             logging.critical('ex={}'.format(ex))
-            logging.critical(pprint.pformat(sql))
+            logging.critical('sql={}'.format(sql))
+            logging.debug(sql)
+            logging.debug('rows={}'.format(rows))
             sys.exit(0)
 
         # all DONE
