@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import pprint
 import sys
 
 from decimal import Decimal
@@ -107,7 +108,7 @@ class CHWriter(Writer):
         except Exception as ex:
             logging.critical('QUERY FAILED')
             logging.critical('ex={}'.format(ex))
-            logging.critical(sql)
+            logging.critical(pprint.pformat(sql))
             sys.exit(0)
 
         # all DONE
