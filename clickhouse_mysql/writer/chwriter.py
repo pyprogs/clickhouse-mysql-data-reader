@@ -111,7 +111,7 @@ class CHWriter(Writer):
             logging.critical('sql={}'.format(sql))
             logging.debug(sql)
             logging.debug('rows={}'.format(rows))
-            sys.exit(0)
+            #sys.exit(0)
 
         # all DONE
 
